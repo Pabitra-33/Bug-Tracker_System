@@ -23,7 +23,3 @@ public class Bug {
     @Enumerated(EnumType.STRING)
     private Status status; // OPEN, IN_PROGRESS, RESOLVED, CLOSED
 }
-
-enum Status {
-    OPEN, IN_PROGRESS, RESOLVED, CLOSED
-}
