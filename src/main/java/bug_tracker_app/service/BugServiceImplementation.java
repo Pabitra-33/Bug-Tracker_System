@@ -20,6 +20,9 @@ public class BugServiceImplementation implements BugService {
 	
 	@Override
 	public Bug addBug(Bug bug) {
+		if (bug.getDescription() == null || bug.getDescription().isEmpty()) {
+		    throw new IllegalArgumentException("Description cannot be null or empty");
+		}
 		return bugRepository.save(bug);
 	}
 
